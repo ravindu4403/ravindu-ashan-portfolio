@@ -1,53 +1,52 @@
-# Ravindu Ashan Portfolio
+# Ravindu Portfolio — Pro V6 Real Content
 
-A modern personal portfolio website built to showcase my software engineering profile, technical skills, real-world projects, live demos, and contact links.
+Professional Next.js portfolio for K.G. Ravindu Ashan Dhananjaya.
 
-## 🌐 Live Demo
+## Included
 
-https://ravindu-ashan-portfolio.vercel.app/
+- Real profile content for Associate Software Engineer / Full-Stack Developer positioning
+- Real qualification and experience wording
+- Project cards for Expo Graphic, PSD Cloud POS, Royal Foods / V&S, Viduni Investment, Nirmal Phone Shop, Lanka Medical, LMS, Smart Attendance, React Native Video Call App, Java POS, C# Battle Game, C++ practice, and SPELLZZ
+- Colorful animated UI with responsive layout
+- Project filters: Laravel, POS, E-commerce, Mobile, Java, C#, C++, Games, Business Systems
+- GitHub / live link support per project
 
-## 📌 Overview
-
-This portfolio website was developed as my professional online profile. It presents my background, education, technical skills, work experience, and project portfolio in a clean and responsive layout.
-
-The main goal of this project is to create a strong online presence for job applications, internship opportunities, and professional networking.
-
-## ✨ Main Features
-
-- Modern and responsive portfolio design
-- Professional hero section
-- About me section
-- Technical skills showcase
-- Featured projects section
-- Live project links
-- GitHub and LinkedIn links
-- Contact information
-- Mobile-friendly layout
-- Deployed using Vercel
-
-## 🛠️ Technologies Used
-
-- Next.js
-- React
-- JavaScript
-- HTML
-- CSS
-- Vercel
-- Git
-- GitHub
-
-## 👨‍💻 My Role / Contribution
-
-- Designed and developed the complete portfolio website
-- Added personal profile details and project showcase
-- Integrated live project links
-- Created responsive layout for desktop and mobile screens
-- Configured GitHub repository
-- Deployed the project using Vercel
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
+## Run locally
 
 ```bash
-git clone https://github.com/ravindu4403/ravindu-ashan-portfolio.git
+npm install
+npm run dev
+```
+
+Open: http://localhost:3000
+
+## Build test
+
+```bash
+npm run build
+```
+
+## Add public project links
+
+Open `app/page.jsx` and update each project object:
+
+```js
+liveUrl: 'https://your-live-link.com',
+repoUrl: 'https://github.com/ravindu4403/project-name',
+```
+
+Keep private projects empty until they are cleaned and uploaded.
+
+
+## Added live links in V6
+
+The following project cards now include live website buttons:
+
+- Nirmal Phone Shop — https://nirmalmobile.lk/
+- Lanka Medical — https://lankamedical.lk/
+- LMS — https://lms-dun-nine.vercel.app
+- Smart Attendance — https://smart-attendance-mx9dm4k84-ravindu4403s-projects.vercel.app
+- Viduni Investment / Loan Frontend — https://loan-frontend-agraab8f2-ravindu4403s-projects.vercel.app
+- Royal Foods / V&S Distribution — https://vandssonsroyal.gamer.gd/login?i=2
+
+Projects without a public live URL or public repository are kept with empty link fields until they are cleaned and uploaded.

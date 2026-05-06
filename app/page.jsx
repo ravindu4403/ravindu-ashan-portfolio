@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { defaultBlogPosts } from './blog/blogData';
 
 const profile = {
   name: 'K.G. Ravindu Ashan Dhananjaya',
@@ -17,7 +18,7 @@ const profile = {
     'I am an Associate Software Engineer with 1 year of hands-on company experience at PSD / People Solutions Development. I completed HNDIT at SLIATE Badulla and build practical systems such as POS platforms, e-commerce websites, LMS solutions, inventory modules, distribution workflows, admin panels, and responsive business applications using Laravel, PHP, MySQL, JavaScript, React, Next.js, Java, C#, and C++.',
 };
 
-const navItems = ['About', 'Experience', 'Projects', 'Skills', 'Process', 'Education', 'Contact'];
+const navItems = ['About', 'Experience', 'Projects', 'Skills', 'Process', 'Education', 'Blog', 'Contact'];
 
 const stats = [
   { value: '1+', label: 'Year Company Experience', note: 'Associate Software Engineer' },
@@ -632,6 +633,48 @@ export default function Home() {
               </div>
               <span>{item.meta}</span>
             </div>
+          ))}
+        </div>
+      </section>
+
+
+      <section id="blog" className="section-shell home-blog-section">
+        <SectionHeading
+          kicker="Blog"
+          title="Real project stories, lessons, and software engineering notes."
+          text="I write about the real systems I build: Laravel e-commerce, POS platforms, distribution workflows, mobile apps, deployment fixes, and the practical lessons behind each project."
+        />
+        <div className="home-blog-panel home-blog-panel-premium reveal-item is-visible">
+          <div className="home-blog-copy">
+            <span className="blog-badge">Project Journal</span>
+            <h3>From idea to working software.</h3>
+            <p>Explore case-study style articles about my portfolio projects, business systems, UI decisions, deployment work, and the problems I solved while building real applications.</p>
+            <div className="blog-mini-stats">
+              <span>Laravel</span>
+              <span>Next.js</span>
+              <span>POS</span>
+              <span>Mobile Apps</span>
+            </div>
+          </div>
+          <div className="home-blog-actions home-blog-actions-orbit">
+            <div className="home-blog-orbit-wrap" aria-hidden="true">
+              <span className="home-blog-orbit-ring ring-one" />
+              <span className="home-blog-orbit-ring ring-two" />
+              <span className="home-blog-orbit-dot dot-one" />
+              <span className="home-blog-orbit-dot dot-two" />
+            </div>
+            <a className="btn primary blog-read-button" href="/blog" aria-label="Open blog page">Read My Blog</a>
+          </div>
+        </div>
+
+        <div className="home-blog-preview-grid reveal-item is-visible">
+          {defaultBlogPosts.slice(0, 3).map((post) => (
+            <a className="home-blog-preview-card" href={`/blog/${post.slug}`} key={post.slug}>
+              <span>{post.category}</span>
+              <h3>{post.title}</h3>
+              <p>{post.excerpt}</p>
+              <strong>Read article →</strong>
+            </a>
           ))}
         </div>
       </section>
